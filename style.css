@@ -732,7 +732,7 @@ section .card .image img {
 /* Desktops and laptops ----------- */
 @media only screen and (max-width: 1371px) {
   .header {
-    padding: 32px 59px 15px 30px;
+    padding: 32px 0 15px 30px;
   }
   .menu {
     padding: 17px 0 18px 30px;
