@@ -811,6 +811,7 @@ section .card .image img {
 .mobile-text {
   margin-top: 14px;
   color: #ffffff;
+  padding-left: 20px;
 }
 .menu-mobile ul li a {
   font-size: 1.5rem;
