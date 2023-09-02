@@ -389,6 +389,7 @@ html {
   color: #232323;
   top: 40%;
   right: 16px;
+  cursor: pointer;
 }
 .arrival-img .icon-heart i {
   margin: 7px 0;
@@ -421,6 +422,9 @@ html {
   background: #ffffff;
   padding: 15px 16px 15px 14px;
   display: none;
+}
+.btn-submit.show-submit {
+  display: block;
 }
 .arrival-img .btn-submit button {
   padding: 18px 89px 16px 89px;
@@ -770,6 +774,11 @@ section .card .image img {
     flex-direction: column;
   }
 }
+@media only screen and (max-width: 564px) {
+  .form-submit button {
+    margin-top: 1rem;
+  }
+}
 /*menu mobile  */
 .nav-bars-btn i {
   color: #090909;
@@ -785,7 +794,7 @@ section .card .image img {
   bottom: 0;
   width: 300px;
   max-width: 100%;
-  background: #090909;
+  background: #06212f;
   display: flex;
   flex-direction: column;
   z-index: 999;
@@ -795,11 +804,13 @@ section .card .image img {
   list-style: none;
   padding: 35px 20px 0 20px;
 }
-.menu-mobile ul li:hover {
+.menu-mobile ul li {
   padding: 2px 4px;
-  background: #13c89c;
-  border-radius: 5px;
   margin-top: 10px;
+}
+.menu-mobile ul li:hover {
+  background: #278fd3;
+  border-radius: 5px;
 }
 .menu-moblie-close {
   font-size: 3rem;
@@ -817,21 +828,29 @@ section .card .image img {
   font-size: 1.5rem;
   margin-top: 3rem;
   text-decoration: none;
-  color: #ffffff;
+  color: #c3d7da;
   text-transform: uppercase;
   text-align: center;
 }
-.menu-mobile a:hover {
-  color: #323232;
+
+.mobile-top {
+  color: #c3d7da;
 }
 .mobile-bottom {
   margin-top: 1rem;
+  color: #c3d7da;
 }
 .mobile-wish {
   margin: 1rem 0;
 }
 .mobile-sign-up a {
-  color: #ffffff;
+  color: #c3d7da;
+}
+.mobile-wish:hover,
+.mobile-card:hover,
+.mobile-sign-up a:hover {
+  color: #278fd3;
+  cursor: pointer;
 }
 .nav-input:checked ~ .menu-mobile {
   transform: translateX(0);

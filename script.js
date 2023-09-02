@@ -1,26 +1,24 @@
+const addToCartButtons = document.querySelectorAll('.addToCartBtn');
+const submitSections = document.querySelectorAll('.btn-submit');
+const iconCloses = document.querySelectorAll('.icon-close');
+const iconShows = document.querySelectorAll('.icon-show');
 
-const addToCartBtns = document.querySelectorAll('.addToCartBtn');
-
-addToCartBtns.forEach(btn => {
-    btn.addEventListener('click', function () {
-        const submitSectionId = this.getAttribute('data-submit-section');
-        const submitSection = document.getElementById(submitSectionId);
-        const iconClose = document.querySelector('.icon-close');
-        const iconShow = document.querySelector('.icon-show');
-        this.style.display = 'none';
-        submitSection.style.display = 'block';
-        iconClose.style.display = 'block';
-        iconShow.style.display = 'block';
-
+addToCartButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        submitSections.forEach((section) => {
+            section.classList.remove('show-submit');
+        });
+        submitSections[index].classList.add('show-submit');
+        iconCloses[index].style.display = 'block';
+        iconShows[index].style.display = 'block';
     });
 });
 
-document.querySelectorAll('.icon-close').forEach(icon => {
-    icon.addEventListener('click', function () {
-        const submitSectionId = this.getAttribute('data-submit-section');
-        const addToCartBtn = document.getElementById(submitSectionId);
-        addToCartBtn.style.display = 'block';
-        this.style.display = "none";
-        document.getElementById(submitSectionId).style.display = 'none';
+iconCloses.forEach((close, index) => {
+    close.addEventListener('click', () => {
+        submitSections[index].classList.remove('show-submit');
+        iconCloses[index].style.display = 'none';
+        iconShows[index].style.display = 'none';
     });
 });
+
