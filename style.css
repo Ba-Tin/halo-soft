@@ -793,7 +793,14 @@ section .card .image img {
   .form-submit button {
     margin-top: 1rem;
   }
+  .form-submit input {
+    padding: 18px 18px 16px 0;
+  }
+  .new-sletter {
+    width: 100%;
+  }
 }
+
 /*menu mobile  */
 .nav-bars-btn i {
   color: #090909;
@@ -849,7 +856,6 @@ section .card .image img {
 }
 .mobile-nav-item {
   position: relative;
-  /* display: inline-block; */
 }
 .mobile-nav-item .sale {
   visibility: visible;
